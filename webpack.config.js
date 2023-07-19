@@ -13,5 +13,16 @@ module.exports = {
     static: {
       directory: path.join(__dirname, '/')
     }
-  } 
+  },
+  module: {
+    rules: [
+      {
+        test: /\.wasm$/,
+        type: 'webassembly/async',
+      }
+    ]
+  },
+  experiments: {
+    asyncWebAssembly: true,
+  }
 };
